@@ -1,25 +1,16 @@
+#include <iostream>
 #include "../includes/PhoneBook.hpp"
+using namespace std;
 
 
 Phonebook::Phonebook() {
-    std::cout << "je viens d'appeler le constructeur" << std::endl;
+    
+    cout << "je viens d'appeler le constructeur" << endl;
 }
 
-Phonebook::Phonebook(int data) {
-
-    this->setSecret()
-    std::cout << "je viens d'appeler le constructeur" << std::endl;
+Phonebook::~Phonebook() {
 }
 
-
-
-void    Phonebook::aff_a() {
-    this->
-
-
+void    Phonebook::new_contact() {
+    
 }
-
-int Phonebook::getSecret(){
-    return nb_secret;
-}
-

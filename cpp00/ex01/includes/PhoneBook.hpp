@@ -1,26 +1,21 @@
 
 class   Phonebook {
     private :
-            int nb_secret;
+            int nb_contact;
 
     public :
 
         Phonebook();
-
-        Phonebook(int data);
         ~Phonebook();
 
 
-        void    aff_a();
-
-        int getSecret();
-        void    setSecret(int data);
-
-        
-
-
-
-
+        void setNb_contact(int nb){
+            this->nb_contact = nb;
+        }
+        int getNb_contact(){
+            return (this->nb_contact);
+        }
+        void    new_contact();
 
 
 
