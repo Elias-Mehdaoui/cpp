@@ -1,57 +1,42 @@
+#ifndef PHONEBOOK_HPP
+#define PHONEBOOK_HPP
+
 #include <iostream>
-using namespace std;
 
 class Contact {
     private :
-        string firstname;
-        string lastname;
-        string nickname;
-        string number;
-        string secret;
+        std::string _firstname;
+        std::string _lastname;
+        std::string _nickname;
+        std::string _number;
+        std::string _secret;
     
     public :
-        Contact(string firstname, string lastname, string nickname, string number, string secret);
+        Contact();
         ~Contact();
 
-        void    setFirstname(string data)
-        {
-            this->firstname = data;
-        }
-        void    setLastname(string data)
-        {
-            this->lastname = data;
-        }
-        void    setNickname(string data)
-        {
-            this->nickname = data;
-        }
-        void    setNumber(string data)
-        {
-            this->number = data;
-        }
-        void    setSecret(string data)
-        {
-            this->secret = data;
-        }
+        int    init_contact();
 
-        string  getFirstname()
+        std::string  getFirstname()
         {
-            return (this->firstname);
+            return (this->_firstname);
         }
-        string  getLastname()
+        std::string  getLastname()
         {
-            return (this->lastname);
+            return (this->_lastname);
         }
-        string  getNickname()
+        std::string  getNickname()
         {
-            return (this->nickname);
+            return (this->_nickname);
         }
-        string  getNumber()
+        std::string  getNumber()
         {
-            return (this->number);
+            return (this->_number);
         }
-        string  getSecret()
+        std::string  getSecret()
         {
-            return (this->secret);
+            return (this->_secret);
         }
 };
+
+#endif

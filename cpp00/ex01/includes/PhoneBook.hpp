@@ -1,22 +1,28 @@
+#ifndef CONTACT_HPP
+#define CONTACT_HPP
+
+#include "Contact.hpp"
 
 class   Phonebook {
     private :
-            int nb_contact;
+            int _nb_contact;
+            int _older;
+            Contact _contact_list[8];
 
     public :
+    
+    Phonebook();
+    ~Phonebook();
+    
 
-        Phonebook();
-        ~Phonebook();
+    int add_contact();
+    void display_list();
+    void display_info(int index);
 
-
-        void setNb_contact(int nb){
-            this->nb_contact = nb;
-        }
-        int getNb_contact(){
-            return (this->nb_contact);
-        }
-        void    new_contact();
-
-
-
+    int getNb_contact()
+    {
+        return (this->_nb_contact);
+    }
 };
+
+#endif
