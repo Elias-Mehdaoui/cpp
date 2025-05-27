@@ -5,9 +5,9 @@ Cure::Cure() : AMateria("cure")
     std::cout << "Cure::Constructor called" << std::endl;
 }
 
-Cure::Cure(const Cure& other) : AMateria("cure")
+Cure::Cure(const Cure& other) : AMateria(other)
 {
-    std::cout << "Cure::Constructor called" << std::endl;
+    std::cout << "Cure::copy Constructor called" << std::endl;
 }
 
 Cure::~Cure()
@@ -25,4 +25,9 @@ Cure& Cure::operator=(const Cure& other)
 Cure* Cure::clone() const
 {
     return (new Cure(*this));
+}
+
+void Cure::use(ICharacter& target)
+{
+    std::cout << "* heals " << target.getName() << "'s wounds *" << std::endl;
 }
