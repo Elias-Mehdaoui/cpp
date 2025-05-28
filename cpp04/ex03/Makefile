@@ -1,6 +1,6 @@
 NAME 		= Materia
 
-SRC_FILES	=	$(addprefix srcs/, AMateria.cpp Character.cpp Ice.cpp Cure.cpp) \
+SRC_FILES	=	$(addprefix srcs/, AMateria.cpp Character.cpp Ice.cpp Cure.cpp MateriaSource.cpp) \
 				main.cpp \
 
 OBJS_DIR	= .objets
