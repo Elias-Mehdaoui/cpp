@@ -1,5 +1,5 @@
 #include "Bureaucrat.hpp"
-#include "Form.hpp"
+#include "AForm.hpp"
 
 Bureaucrat::Bureaucrat() : _name("unknown"), _grade(1)
 {
@@ -17,6 +17,7 @@ Bureaucrat::Bureaucrat(const std::string name, int grade) : _name(name)
 Bureaucrat::Bureaucrat(const Bureaucrat& other) : _name(other._name), _grade(other._grade)
 {
 }
+
 Bureaucrat::~Bureaucrat()
 {
 }
@@ -53,7 +54,7 @@ void Bureaucrat::gradeDec()
     _grade++;
 }
 
-void Bureaucrat::signForm(Form& form)
+void Bureaucrat::signForm(AForm& form)
 {
     if (form.getSigned())
     {
@@ -70,6 +71,16 @@ void Bureaucrat::signForm(Form& form)
         std::cout << _name << " couldn't sign " << form.getName() << " because his grade isn't high enough" << std::endl  ;
     }
 }
+
+void Bureaucrat::executeForm(AForm const & form)
+{
+    if (form.action(*this))
+        std::cout << _name << " executed " << form.getName() << std::endl;
+    else
+        std::cout << _name << " couldn't execute " << form.getName() << std::endl;
+}
+
+
 
 std::ostream& operator<<(std::ostream& os, const Bureaucrat& Bureaucrat) {
     os << Bureaucrat.getName() << ", bureaucrat grade " << Bureaucrat.getGrade() << ".";

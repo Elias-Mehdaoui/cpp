@@ -1,6 +1,6 @@
 NAME 		= Bureaucrat
 
-SRC_FILES	=	$(addprefix srcs/, Bureaucrat.cpp Form.cpp) \
+SRC_FILES	=	$(addprefix srcs/, Bureaucrat.cpp AForm.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp) \
 				main.cpp \
 
 OBJS_DIR	= .objets

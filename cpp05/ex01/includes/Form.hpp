@@ -1,5 +1,11 @@
+#ifndef FORM_HPP
+#define FORM_HPP
+
 #include <string>
+#include <iostream>
 #include "Bureaucrat.hpp"
+
+class Bureaucrat;
 
 class Form 
 {
@@ -32,8 +38,13 @@ class Form
         Form& operator=(const Form& other);
 
         const std::string getName() const;
-        const int getSign() const;
-        const int getExec() const;
+        int getSign() const;
+        int getExec() const;
         bool getSigned() const;
-        void beSigned(Bureaucrat& bureaucrat)
+        void beSigned(const Bureaucrat& bureaucrat);
 };
+
+std::ostream& operator<<(std::ostream& os, const Form& form);
+
+
+#endif
