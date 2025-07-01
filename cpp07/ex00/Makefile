@@ -1,7 +1,6 @@
 NAME 		= whatever
 
-SRC_FILES	=	$(addprefix srcs/, whatever.cpp) \
-				main.cpp \
+SRC_FILES	=	main.cpp
 
 OBJS_DIR	= .objets
 

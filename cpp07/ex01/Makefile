@@ -1,7 +1,6 @@
 NAME 		= Iter
 
-SRC_FILES	=	$(addprefix srcs/,iter.cpp) \
-				main.cpp \
+SRC_FILES	=	main.cpp
 
 OBJS_DIR	= .objets
 

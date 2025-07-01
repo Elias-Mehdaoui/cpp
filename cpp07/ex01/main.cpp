@@ -2,14 +2,7 @@
 #include <string>
 #include "iter.hpp"
 
-// Assuming iter is implemented elsewhere (e.g., in a header)
-template <typename T, typename Func>
-void iter(T* array, size_t length, Func func) {
-    for (size_t i = 0; i < length; ++i)
-        func(array[i]);
-}
 
-// Test functions
 template <typename T>
 void print(const T& x) {
     std::cout << x << " ";
